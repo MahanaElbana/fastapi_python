@@ -1,0 +1,45 @@
+
+
+# Create table
+# cur.execute('''
+# CREATE TABLE Category (
+#    CategoryID int AUTO_INCREMENT NOT NULL ,
+#    Name varchar(255) NOT NULL,
+#    PRIMARY KEY (CategoryID)
+# )'''
+# )
+#
+# cur.execute('''
+# CREATE TABLE book (
+#    BookID int AUTO_INCREMENT NOT NULL,
+#    NameBOOK varchar(255) NOT NULL,
+#    auther_name varchar(255) NOT NULL,
+#    CatID int,
+#    PRIMARY KEY (BookID),
+#    FOREIGN KEY (CatID) REFERENCES Category(CategoryID)
+# )''')
+
+# print("*"*60)
+# categories = cur.execute('SELECT * FROM Category')
+# print(categories.fetchall())
+
+# print("*"*60)
+
+# books = cur.execute('SELECT * FROM book')
+# print(books.fetchall())
+# print("*"*60)
+
+
+# books = cur.execute('SELECT * FROM book where CatID=1')
+
+# catId = books.fetchall()[0][3]
+# category = cur.execute(f'SELECT * FROM Category where CategoryID={catId}')
+# print(category.fetchall()[0][1])
+# #print(books.fetchall()[0][3])
+# print("*"*60)
+# # Save (commit) the changes
+# con.commit()
+
+# We can also close the connection if we are done with it.
+# Just be sure any changes have been committed or they will be lost.
+# con.close()
