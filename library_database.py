@@ -63,3 +63,5 @@ def insert_category(categoryName):
         """) 
         savedatabase()
         print({"💙 ✨": HTTPStatus.ACCEPTED})        
+
+#print(__name__)        
